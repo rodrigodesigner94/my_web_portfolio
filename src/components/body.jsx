@@ -1,26 +1,39 @@
-import { Card, Figure, Button, Container, Nav, Navbar } from "react-bootstrap";
+import { Card, Figure, Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 
  export function TopNav(){
   return(
-    <Navbar bg="dark" variant="dark" style={{width: '100vw', position: 'fixed', zIndex: '1',
-     transitionTimingFunction: 'ease-in', transition: 'all 0.5s'}}>
-        <Container>
-          <Navbar.Brand href="#header">E-Currículo</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#header">GitHub Profile</Nav.Link>
-            <Nav.Link href="#repos">GitHub Repositories</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
+    <Navbar bg="dark" expand="lg" style={{width: '100vw', position: 'fixed', zIndex: '1'}}>
+    <Container>
+      <Navbar.Brand href="#header" style={{color:'#fff'}}>E-Curriculo</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          <Nav.Link href="#header" style={{color:'#fff'}}>Github Profile</Nav.Link>
+          <Nav.Link href="#repos" style={{color:'#fff'}}>Git Repositories</Nav.Link>
+          <Nav.Link href="" style={{color:'#fff'}}>Education</Nav.Link>
+          {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown> */}
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
   )
  }
   
  export function Header ({image, name, login, profile, location, bio}) {
     return (
       <Card id="header"
-        style={{width: '30rem', alignItems: 'center', backgroundColor: '#000',
-        boxShadow: '5px 5px 4.5px grey', marginTop: '65px'}}>
+        style={{width: '25rem', alignItems: 'center', backgroundColor: '#000',
+        boxShadow: '5px 5px 4.5px grey', marginTop: '5.5em'}}>
         <Figure style={{marginTop: '10px'}}>
         <Figure.Image
           width={171}
