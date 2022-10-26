@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import  '../bootstrap/bootstrap.min.css';
+import '../bootstrap/bootstrap.min.js';
 import { useEffect } from 'react';
 import { Header, Repositories, TopNav} from './components/body';
 import './index.css'
