@@ -50,7 +50,7 @@ import { Card, Figure, Button, Container, Nav, Navbar } from "react-bootstrap";
          style={{width: '25rem', margin: '10px', boxShadow: '4px 4px 6px'}}>
       <Card.Header>Repositório</Card.Header>
       <Card.Body>
-        <Card.Title>{repoName}</Card.Title>
+        <Card.Title style={{height:'2rem'}}>{repoName}</Card.Title>
         <Card.Text>
           {description}
         </Card.Text>
